@@ -8,10 +8,43 @@
     <title>
         <%= pageTitle %>
     </title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-    <h1>Welcome to homepage</h1>
+    <div class="hero">
+        <div class="form-box">
+            <div class="headline">Itinerary planner</div>
+            <form class="input-group">
+                <input type="text" class="input-field" placeholder="Enter Destination" required>
+                <button type="button" class="add-destination" id="add-dest">+ Add Destination</button>
+                <div class="dates">
+                    <input type="text" id="start-date" onfocus="(this.type='date')" class="date-field" placeholder="Starting Date" required>
+                    <input type="text" id="end-date" onfocus="(this.type='date')" class="date-field" placeholder="Ending Date" required>
+                </div>
+                <input type="text" id="guest-num" class="input-field" placeholder="Guests">
+                <div class="activities-preferences">Activities Preferences (Optional)</div>
+                <div>
+                    <input type="checkbox" class="checkboxes" id="culture" name="culture" value="culture">
+                    <label for="culture"> Culture   </label>
+                    <input type="checkbox" class="checkboxes" id="outdoors" name="outdoors" value="outdoors">
+                    <label for="outdoors"> Outdoors   </label>
+                    <input type="checkbox" class="checkboxes" id="beaches" name="beaches" value="beaches">
+                    <label for="beaches"> Beaches   </label>
+                    <br>
+                    <input type="checkbox" class="checkboxes" id="culture" name="culture" value="culture">
+                    <label for="culture"> Culture</label>
+                    <input type="checkbox" class="checkboxes" id="outdoors" name="outdoors" value="outdoors">
+                    <label for="outdoors"> Outdoors</label>
+                    <input type="checkbox" class="checkboxes" id="beaches" name="beaches" value="beaches">
+                    <label for="beaches"> Beaches</label>
+                </div>
+            </form>
+            <div class="button-box">
+                <button type="submit" class="submit-btn">See Your Trip</button>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
