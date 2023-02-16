@@ -15,34 +15,29 @@
     <div class="hero">
         <div class="form-box">
             <div class="headline">Itinerary planner</div>
-            <form class="input-group">
-                <input type="text" class="input-field" placeholder="Enter Destination" required>
+
+            <form class="input-group" action="/location_entered" method="post">
+                <input type="text" name="entered_dest" class="input-field" placeholder="Enter Destination" required>
                 <button type="button" class="add-destination" id="add-dest">+ Add Destination</button>
                 <div class="dates">
-                    <input type="text" id="start-date" onfocus="(this.type='date')" class="date-field" placeholder="Starting Date" required>
-                    <input type="text" id="end-date" onfocus="(this.type='date')" class="date-field" placeholder="Ending Date" required>
+                    <input type="text" name="start_date" id="start-date" onfocus="(this.type='date')" class="date-field" placeholder="Starting Date" required>
+                    <input type="text" name="end_date" id="end-date" onfocus="(this.type='date')" class="date-field" placeholder="Ending Date" required>
                 </div>
-                <input type="text" id="guest-num" class="input-field" placeholder="Guests">
+                <input type="text" name="guest_num" id="guest-num" class="input-field" placeholder="Guests">
                 <div class="activities-preferences">Activities Preferences (Optional)</div>
-                <div>
-                    <input type="checkbox" class="checkboxes" id="culture" name="culture" value="culture">
+                <div class="checkboxes">
+                    <input type="checkbox" id="culture" name="culture" value="culture">
                     <label for="culture"> Culture   </label>
-                    <input type="checkbox" class="checkboxes" id="outdoors" name="outdoors" value="outdoors">
+                    <input type="checkbox" class="hiking" id="hiking" name="hiking" value="hiking">
                     <label for="outdoors"> Outdoors   </label>
-                    <input type="checkbox" class="checkboxes" id="beaches" name="beaches" value="beaches">
+                    <input type="checkbox" id="beaches" name="beaches" value="beaches">
                     <label for="beaches"> Beaches   </label>
-                    <br>
-                    <input type="checkbox" class="checkboxes" id="culture" name="culture" value="culture">
-                    <label for="culture"> Culture</label>
-                    <input type="checkbox" class="checkboxes" id="outdoors" name="outdoors" value="outdoors">
-                    <label for="outdoors"> Outdoors</label>
-                    <input type="checkbox" class="checkboxes" id="beaches" name="beaches" value="beaches">
-                    <label for="beaches"> Beaches</label>
+                </div>
+                <div class="button-box">
+                    <button type="submit" class="submit-btn">See Your Trip</button>
                 </div>
             </form>
-            <div class="button-box">
-                <button type="submit" class="submit-btn">See Your Trip</button>
-            </div>
+
         </div>
     </div>
 </body>
